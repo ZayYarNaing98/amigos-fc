@@ -22,10 +22,10 @@ export const stats = [
 
 export const players = [
   { number: 1, name: 'Nay Myo Zaw', position: 'Goalkeeper' },
-  { number: 2, name: 'Soe Win Myint', position: 'Defender' },
+  { number: 2, name: 'ကိုကာကျက်', position: 'Defender' },
   { number: 4, name: 'Ko Linn', position: 'Defender' },
-  { number: 5, name: 'Wunna Htun', position: 'Defender' },
-  { number: 3, name: 'Min Thu', position: 'Defender' },
+  { number: 5, name: 'ရေနွေးဦး', position: 'Defender' },
+  { number: 3, name: 'အကောက်စိန်', position: 'Defender' },
   { number: 6, name: 'Zaybimendi', position: 'Midfielder' },
   { number: 8, name: 'Kaung Martt', position: 'Midfielder' },
   { number: 10, name: 'Egyar', position: 'Midfielder', captain: true },
