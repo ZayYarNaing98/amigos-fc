@@ -6,7 +6,7 @@ export const club = {
   name: 'Amigos FC',
   shortName: 'Amigos',
   motto: 'Together we play, together we win.',
-  founded: 2033,
+  founded: 2023,
   stadium: 'Amigos Community Ground',
   city: 'Yangon',
   email: 'zayarnaing.pp@gmail.com',
@@ -21,7 +21,7 @@ export const stats = [
 ]
 
 export const players = [
-  { number: 1, name: 'Nay Myo Zaw', position: 'Goalkeeper' },
+  { number: 1, name: 'ဆရာနေ', position: 'Goalkeeper' },
   { number: 2, name: 'ကိုကာကျက်', position: 'Defender' },
   { number: 4, name: 'Ko Linn', position: 'Defender' },
   { number: 5, name: 'ရေနွေးအိုး', position: 'Defender' },
