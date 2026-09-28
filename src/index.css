@@ -43,7 +43,7 @@ h1, h2, h3 { line-height: 1.15; margin: 0; }
 }
 
 /* Logo */
-.crest { display: block; border-radius: 50%; object-fit: cover; background: var(--black); }
+.crest { display: block; border-radius: 50%; object-fit: contain; }
 .hero-card .crest { margin: 0 auto; box-shadow: 0 0 0 4px rgb(255 255 255 / 0.12); }
 
 /* Navbar */

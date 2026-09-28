@@ -1,4 +1,4 @@
-import logo from '../assets/logo.jpg'
+import logo from '../assets/logo.webp'
 import { club } from '../data.js'
 
 export default function Crest({ size = 48 }) {
