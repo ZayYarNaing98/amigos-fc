@@ -19,7 +19,8 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
-body { margin: 0; background: var(--bg); }
+body { margin: 0; background: var(--bg); overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
 a { color: inherit; }
 h1, h2, h3 { line-height: 1.15; margin: 0; }
 
@@ -76,7 +77,7 @@ h1, h2, h3 { line-height: 1.15; margin: 0; }
 .hero h1 span { color: var(--yellow); }
 .motto { font-size: 1.25rem; opacity: 0.9; margin: 16px 0 32px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-.btn { display: inline-block; padding: 12px 26px; border-radius: 999px; font-weight: 700; text-decoration: none; transition: transform 0.15s; }
+.btn { display: inline-block; white-space: nowrap; padding: 12px 26px; border-radius: 999px; font-weight: 700; text-decoration: none; transition: transform 0.15s; }
 .btn:hover { transform: translateY(-2px); }
 .btn-primary { background: var(--yellow); color: var(--navy); }
 .btn-ghost { border: 2px solid rgb(255 255 255 / 0.6); }
@@ -130,14 +131,14 @@ h1, h2, h3 { line-height: 1.15; margin: 0; }
 .result-L { background: #d64545; }
 
 /* News */
-.news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 20px; }
 .news-card { background: var(--card); border-radius: var(--radius); padding: 24px; border-top: 4px solid var(--yellow); box-shadow: 0 2px 10px rgb(0 0 0 / 0.05); }
 .news-card time { font-size: 0.8rem; color: var(--muted); }
 .news-card h3 { margin: 6px 0 10px; font-size: 1.15rem; color: var(--navy); }
 .news-card p { margin: 0; color: var(--muted); }
 
 /* Gallery */
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 20px; }
 .gallery-item { margin: 0; overflow: hidden; border-radius: var(--radius); background: var(--black); box-shadow: 0 6px 20px rgb(0 0 0 / 0.12); }
 .gallery-item img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.3s; }
 .gallery-item:hover img { transform: scale(1.04); }
@@ -178,4 +179,43 @@ h1, h2, h3 { line-height: 1.15; margin: 0; }
   .nav-links a { padding: 14px 20px; }
   .match { grid-template-columns: 1fr auto; }
   .match-date { grid-column: 1 / -1; flex-direction: row; gap: 8px; }
+}
+@media (max-width: 560px) {
+  .container { padding: 0 16px; }
+  .section { padding: 48px 0; }
+  .hero { padding: 40px 0 48px; }
+  .hero-inner { gap: 28px; }
+  .motto { font-size: 1.05rem; margin: 12px 0 24px; }
+  .hero-actions .btn { flex: 1; text-align: center; padding: 12px 16px; }
+  .hero-card { display: flex; align-items: center; gap: 16px; padding: 16px; text-align: left; }
+  .hero-card .crest { width: 72px; height: 72px; margin: 0; flex-shrink: 0; }
+  .next-match { margin-top: 0; }
+  .next-match .teams { font-size: 1.05rem; }
+  .next-match .when { font-size: 0.9rem; }
+  .about { gap: 28px; }
+  .stats { gap: 12px; }
+  .stat { padding: 18px 12px; }
+  .stat-value { font-size: 1.6rem; }
+  .filters { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px 20px; padding: 0 16px 4px; scrollbar-width: none; }
+  .filters::-webkit-scrollbar { display: none; }
+  .chip { flex-shrink: 0; }
+  .player-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .player-card { padding: 16px 14px; }
+  .player-card:hover { transform: none; }
+  .player-card h3 { font-size: 0.95rem; }
+  .player-card p { font-size: 0.8rem; }
+  .player-number { font-size: 3rem; right: 8px; top: -4px; }
+  .fixtures { gap: 40px; }
+  .match { padding: 14px; gap: 8px 12px; }
+  .match-teams { font-size: 0.95rem; }
+  .news-card { padding: 20px; }
+  .gallery-grid { gap: 14px; }
+  .contact-inner { gap: 24px; }
+  .contact-list a { word-break: break-all; }
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+@media (max-width: 360px) {
+  .hero-actions .btn { padding: 11px 12px; font-size: 0.9rem; }
+  .hero-card .crest { width: 56px; height: 56px; }
+  .brand { font-size: 1rem; }
 }
